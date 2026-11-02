@@ -1,0 +1,12 @@
+{
+  "client": "LA Móveis Planejados",
+  "latest_snapshot": "2026-11-02",
+  "snapshots": [
+    {
+      "date": "2026-11-02",
+      "file": "2026-11-02.json",
+      "label": "02 nov 2026"
+    }
+  ],
+  "note": "Snapshots semanais são históricos e não devem ser sobrescritos."
+}
