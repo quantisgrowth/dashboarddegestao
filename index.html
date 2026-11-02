@@ -113,5 +113,6 @@ function applySectionAnalysis(id,from,to){
   status.textContent=includes?"O intervalo inclui 02/11/2026; os indicadores correspondem ao snapshot desse dia, não a totais acumulados no intervalo.":"Não existe snapshot de CRM dentro do intervalo. Os indicadores foram esmaecidos para não apresentar a extração de 02/11 como resultado desse período.";
  }
 }
+document.getElementById("meta-analysis-apply").addEventListener("click",()=>{const f=document.getElementById("meta-analysis-from").value,t=document.getElementById("meta-analysis-to").value,ok=f<="2026-05-01"&&t>="2026-10-31";document.querySelectorAll("#meta .grid .card").forEach(c=>c.classList.toggle("data-unavailable",!ok));});
 document.querySelectorAll(".analysis-range[data-section]").forEach(box=>{const id=box.dataset.section,from=box.querySelector(".date-from"),to=box.querySelector(".date-to");const apply=()=>{if(from.value&&to.value&&from.value<=to.value)applySectionAnalysis(id,from.value,to.value)};from.addEventListener("change",apply);to.addEventListener("change",apply);apply()});
 </script></body></html>
